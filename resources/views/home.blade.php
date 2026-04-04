@@ -1,0 +1,638 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <div class="container-fluid p-0 ">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="#home" class="nav-item nav-link active">الرئيسية</a>
+                    <a href="#about" class="nav-item nav-link">نبدة عنا</a>
+                    <a href="#services" class="nav-item nav-link">خدماتنا</a>
+                    <a href="#projects"
+                        class="nav-link "">مشاريعنا</a>
+                                                                                                                                                    <a href="
+                        #contact" class="nav-item nav-link">اتصل
+                        بنا</a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a href="{{ route('home') }}" class="navbar-brand ms-4 ms-lg-0">
+                        <h2 class="mb-0 text-primary text-uppercase">
+                            <i class=" logo"><img src="{{ asset('assets/img/logo1.png') }}" alt=""></i>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{{ asset('assets/img/carousel-1.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>شركة</h5>
+                                <h1 class="display-1"> بالمبروك للمقاولات العامة والإستثمار</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">
+                            هي شركة تعمل في مجال تنفيذ المشاريع والأشغال العمومية، مثل تشييد الطرق والبنية
+                            التحتية، مع الإشراف على مختلف مراحل المشروع من التخطيط إلى التسليم.<br>
+
+                        </p>
+                        <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">تعرف على المزيد
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{{ asset('assets/img/carousel-2.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>شركة</h5>
+                                <h1 class="display-1">بالمبروك للمقاولات العامة والإستثمار</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">شريك موثوق في إنجاز المشاريع الهندسية، يقدّم حلول بناء
+                            متكاملة تجمع بين الجودة، الالتزام، والدقة في التنفيذ.
+                            <br>
+                        </p>
+                        <a class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">تعرف على المزيد
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid id " id="about">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7 pb-0 pb-lg-5 py-5">
+                    <div class="pb-0 pb-lg-5 py-5">
+                        <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="title-left">
+                                <h5>تاريخنا</h5>
+                                <h1>من نحن</h1>
+                            </div>
+                        </div>
+                        <div class="about-company">
+
+                            <div class="about-intro">
+                                <p>
+                                    تأسست شركة بالمبروك للمقاولات العامة والاستثمار بتاريخ 13 فيفري 2021، وهي شركة متخصصة في
+                                    إنجاز
+                                    مشاريع الأشغال العمومية، خاصة في مجال الطرق والبنية التحتية.
+                                </p>
+                                <p>
+                                    تمتلك الشركة رأس مال يقدر بـ <strong>250,000,000 دل</strong>، وتعتمد على فريق عمل متكامل
+                                    يضم كفاءات متعددة في مختلف التخصصات.
+                                </p>
+                            </div>
+
+                            <div class="about-flex">
+
+                                <!-- Team -->
+                                <div class="about-card">
+                                    <h3>👷 الفريق البشري</h3>
+                                    <ul>
+                                        <li>مدير تنفيذي ومدير إداري</li>
+                                        <li> 6 مديري مشاريع</li>
+                                        <li> 15 مهندسًا</li>
+                                        <li> 4 محاسبين</li>
+                                        <li> 12 مسيّر أشغال</li>
+                                        <li> 35 تقنيًا</li>
+                                        <li> 32 سائقًا</li>
+                                        <li> 65 عاملًا</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Services -->
+                                <div class="about-card">
+                                    <h3>🏗️ مجالات النشاط</h3>
+                                    <ul>
+                                        <li>إنجاز الطرق</li>
+                                        <li>شبكات الصرف الصحي</li>
+                                        <li>الجسور والمنشآت الفنية</li>
+                                        <li>التهيئة الحضرية</li>
+                                        <li>أشغال البنية التحتية</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="about-footer">
+                                <p>
+                                    تعمل الشركة وفق القوانين المعمول بها وتحت إشراف الجهات المختصة، مع احترام معايير الجودة
+                                    والسلامة.
+                                </p>
+                                <p class="highlight">
+                                    نحن نؤمن بأن الطرق هي أساس التنمية الاقتصادية والاجتماعية.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+
+                        <div>
+                            <div class="col-6">
+                            </div>
+                            <div class="col-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 about-img wow fadeInUp" data-wow-delay="0.5s">
+                    <img class="img-fluid" src="{{ asset('assets/img/about.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5" id="services">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>خدماتنا</h5>
+                        <h1>كيف لنا أن نساهم</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-item service-item-left">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-1.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">إنجاز الطرق</h3>
+                            <p class="mb-4">نقوم بتنفيذ الطرق وفق أعلى المعايير الهندسية لضمان متانتها وسهولة استخدامها.
+                                نختار المواد المناسبة لكل نوع من الطرق لتدوم لسنوات طويلة.
+                                نعتمد أحدث المعدات والتقنيات لتسريع عمليات البناء وتقليل الأخطاء.
+                                هدفنا هو توفير بنية تحتية متينة تدعم التنمية الاقتصادية والاجتماعية.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-item service-item-right">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-2.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">شبكات الصرف الصحي</h3>
+                            <p class="mb-4">نصمم شبكات صرف صحي متكاملة تضمن تصريف المياه بكفاءة عالية.
+                                نعمل على حماية البيئة من التلوث من خلال تصميم محكم للصرف الصحي.
+                                فرقنا المتخصصة تضمن تركيب الأنابيب والمواسير بدقة وجودة عالية.
+                                تساعد هذه الشبكات في تحسين الصحة العامة والوقاية من الأمراض.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-item service-item-left">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-3.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">الجسور والمنشآت الفنية</h3>
+                            <p class="mb-4">ننفذ جسورًا ومنشآت فنية قوية لتسهيل النقل وربط المناطق المختلفة.
+                                نلتزم بأعلى معايير السلامة لضمان سلامة المستخدمين على الدوام.
+                                يتم استخدام تقنيات حديثة لضمان جودة المواد وطول العمر الافتراضي.
+                                نعمل على دمج التصميم الجمالي مع المتانة الهندسية في كل مشروع.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="service-item service-item-right">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-4.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">التهيئة الحضرية</h3>
+                            <p class="mb-4">نخطط ونعمل على تطوير المناطق الحضرية لتصبح أكثر جاذبية.
+                                يشمل عملنا إنشاء ممرات ومناطق خضراء ومساحات عامة متناسقة.
+                                نهدف إلى تحسين جودة الحياة لسكان المدن والمجتمعات المحلية.
+                                نراعي الجماليات والوظائف معًا في تصميم كل مشروع حضري.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+    </div>
+    <!-- Service End -->
+
+
+
+
+
+
+    <!-- Projects Start -->
+    <div class="container-fluid py-5" id="projects">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>مشاريع منجزة</h5>
+                        <h1>تعرف على بعض إنجازاتنا</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-1.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-2.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-3.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-4.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-6.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-7.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-8.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Repeat for other team members -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span></span>
+
+                            </div>
+                            <img class="img-fluid" src="{{ asset('assets/img/project-9.jpeg') }}" alt="">
+                            <div class="team-after">
+                                <span></span>
+                                <span></span>
+                                <span>طريق زوارة الجميل</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0"></h5>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Continue updating team-3.jpg to team-8.jpg in the same way -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Contact Start -->
+    <div id="contact" class="container-fluid py-5 bg-dark contact-bg">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="title">
+                    <div class="title-center">
+                        <h5>اتصل بنا</h5>
+                        <h1>نحن في خدمتك</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h4>معلومات التواصل</h4>
+                        <p>📍 العنوان: ليبيا - طرابلس -شارع الظل بن عاشور</p>
+                        <p>📞 الهاتف:
+                            <br>
+                            +218 91 226 4780
+                            <br>
+                            +216 98 307 745
+                        </p>
+                        <p>📧 البريد: Belmabrouklibya@gmail.com</p>
+                        <p>🕒 ساعات العمل: 08:00 - 17:00</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="الاسم الكامل">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="الموضوع">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="رسالتك"></textarea>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button class="btn btn-primary px-5 py-3">إرسال</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+
+
+    <div class="container-fluid text-light footer py-5"
+        style="background-image: url('{{ asset('assets/img/footer2.jpg') }}'); background-size: cover; background-position: center;">
+
+        <div class="container text-center py-5">
+
+            <!-- Logo + Title -->
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center mb-4 ">
+
+                <!-- Text FIRST -->
+                <h1 class="display-6 text-white text-uppercase mb-3 mb-lg-0 me-lg-3 text-center text-lg-start">
+                    شركة بالمبروك للمقاولات العامة والإستثمار
+                </h1>
+
+                <!-- Logo SECOND (will appear on the right) -->
+                <img class="img-logo" src="{{ asset('assets/img/logo2.png') }}" alt="" style="height:120px;">
+
+            </div>
+
+            <!-- Coming soon -->
+            <p class="para mb-4">COMING SOON</p>
+
+            <!-- Social icons -->
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="mb-0">
+                &copy; Belmabrouk Company, All Rights Reserved 2026.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+@endsection
